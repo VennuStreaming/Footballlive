@@ -1,0 +1,6 @@
+node_modules/
+.env
+footballlive.db
+footballlive.db-shm
+footballlive.db-wal
+.DS_Store
