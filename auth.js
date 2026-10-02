@@ -1,0 +1,2 @@
+async function send(path){const email=document.getElementById("email").value.trim(),password=document.getElementById("password").value;const r=await fetch(path,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({email,password})});const d=await r.json();document.getElementById("msg").textContent=d.error||"Berhasil";if(r.ok)setTimeout(()=>location.href="/",500);}
+function login(){send("/api/auth/login")} function register(){send("/api/auth/register")}

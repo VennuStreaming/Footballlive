@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FootballLive — Live Score & Jadwal</title>
+<meta name="description" content="FootballLive: live score, jadwal pertandingan, klasemen, statistik dan match center sepak bola.">
+<meta property="og:title" content="FootballLive — Live Score & Jadwal">
+<meta property="og:description" content="Live score dan match center sepak bola.">
+<link rel="stylesheet" href="/assets/style.css"><link rel="manifest" href="/manifest.webmanifest"><meta name="theme-color" content="#081019">
+</head>
+<body>
+<header class="topbar"><div class="brand">⚽ FootballLive</div><nav><a href="#live">Live</a><a href="#schedule">Jadwal</a><a href="#leagues">Liga</a></nav><div id="account"><a class="btn ghost" href="/login.html">Masuk</a></div></header>
+<main class="container">
+<section class="hero"><div><span class="eyebrow">GUEST FIRST</span><h1>Langsung lihat pertandingan.<br>Tanpa wajib login.</h1><p>Live score, jadwal, klasemen, statistik dan detail pertandingan tersedia untuk semua pengunjung.</p><div class="hero-actions"><button class="btn" onclick="loadMatches('live')">Lihat Live</button><button class="btn ghost" onclick="loadMatches('today')">Jadwal Hari Ini</button></div></div><div class="hero-card"><div class="pulse"></div><b>LIVE CENTER</b><span>Login hanya jika ingin menyimpan favorit.</span></div></section>
+<div class="ad-slot" id="ad-top">ADVERTISEMENT / SPONSOR</div>
+<section class="quick-grid">
+<a class="quick" href="#live"><b>🔴 Live Sekarang</b><span>Pertandingan yang sedang berjalan</span></a>
+<a class="quick" href="/league/39"><b>🏆 Premier League</b><span>Klasemen & top skor</span></a>
+<a class="quick" href="/login.html"><b>⭐ Favorit</b><span>Login hanya jika ingin menyimpan</span></a>
+</section>
+<section id="live"><div class="section-head"><div><h2>Match Center</h2><p id="status">Memuat pertandingan…</p></div><div class="tools"><input id="search" placeholder="Cari tim..." onkeydown="if(event.key==='Enter')searchMatches()"><button class="btn ghost" onclick="searchMatches()">Cari</button></div></div><div class="tabs"><button class="active" onclick="loadMatches('today',this)">Hari Ini</button><button onclick="loadMatches('live',this)">Live</button></div><div id="matches" class="matches"></div></section>
+<div class="ad-slot" id="ad-middle">ADVERTISEMENT / SPONSOR</div>
+<section class="news-strip"><div><span class="eyebrow">MATCH CENTER</span><h2>Semua yang Anda butuhkan untuk mengikuti sepak bola</h2><p>Skor, jadwal, statistik, klasemen, top skor dan detail pertandingan dalam satu tempat.</p></div></section>
+<section id="leagues"><div class="section-head"><div><h2>Pusat Liga</h2><p>Klasemen dan top skor tersedia dari halaman liga.</p></div></div><div class="league-grid"><a href="/league/39" class="card">🇬🇧 Premier League <span>→</span></a><a href="/league/140" class="card">🇪🇸 La Liga <span>→</span></a><a href="/league/135" class="card">🇮🇹 Serie A <span>→</span></a><a href="/league/78" class="card">🇩🇪 Bundesliga <span>→</span></a></div></section>
+<section class="sponsor"><span class="eyebrow">PARTNERSHIP</span><h2>Tempat untuk sponsor & endorsement</h2><p>Kelola slot iklan dari panel admin. Untuk jaringan iklan, pasang kode hanya setelah memenuhi kebijakan dan persyaratan jaringan tersebut.</p></section>
+</main>
+<footer>FootballLive © 2026 · <a href="/privacy">Privasi</a> · <a href="/terms">Syarat</a> · Match data via API-Football · Streaming hanya untuk konten resmi/berizin.</footer>
+<script src="/assets/app.js"></script>
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("/sw.js").catch(()=>{});}</script>
+</body></html>
